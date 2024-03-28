@@ -1,6 +1,7 @@
-import * as React from 'react';
-import ElevateAppBar from 'interface/windows/Drawer';
+import React from 'react';
+
+import AppMainWindow from 'interface/windows/AppMainWindow';
 
 export default function App() {
-  return <ElevateAppBar />;
+  return <AppMainWindow />;
 }
