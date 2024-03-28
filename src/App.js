@@ -1,5 +1,6 @@
 import * as React from 'react';
+import ElevateAppBar from 'interface/windows/Drawer';
 
 export default function App() {
-  return <h1>Simple-JS</h1>;
+  return <ElevateAppBar />;
 }
