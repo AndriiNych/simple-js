@@ -1,5 +1,3 @@
-import THEME_MODE from './constant';
+import { THEME_MODE, BACKGROUD_ALTERNATIVE } from './constant';
 
-const STYLE = { THEME_MODE };
-
-export default STYLE;
+export { THEME_MODE, BACKGROUD_ALTERNATIVE };

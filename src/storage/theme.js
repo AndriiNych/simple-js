@@ -1,10 +1,10 @@
-import STYLE from 'style';
+import { THEME_MODE } from 'style';
 
 const THEME_MODE_NAME = 'themeMode';
 
 const getThemeModeFromLocalStorageAsChecked = () => {
   const mode = localStorage.getItem(THEME_MODE_NAME) || '';
-  return mode === STYLE.THEME_MODE.DARK ? true : false;
+  return mode === THEME_MODE.DARK ? true : false;
 };
 
 const setThemeModeToLocalStorage = mode => {

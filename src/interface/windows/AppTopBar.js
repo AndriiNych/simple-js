@@ -1,9 +1,5 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
@@ -24,24 +20,16 @@ function ElevationScroll(props) {
 }
 
 export default function AppTopBar(props) {
+  const { tabNumber, selectTab } = props;
+
   return (
     <React.Fragment>
       <CssBaseline />
       <ElevationScroll {...props}>
-        {/* <Stack sx={{ width: '100%' }} position="fixed"> */}
-        {/* <Box position="fixed" sx={{ width: '100%' }} color="primary"> */}
         <AppBar>
-          {/* <Toolbar className="w-full"> */}
           <AppBarHeader {...props} />
-          {/* </Toolbar> */}
-          {/* <Toolbar sx={{ backgroundColor: 'rgb(156, 163, 175)' }}> */}
-          <AppBarTabs />
-          {/* </Toolbar> */}
+          <AppBarTabs tabNumber={tabNumber} selectTab={selectTab} />
         </AppBar>
-        {/* <AppBar position="static">
-            
-          </AppBar> */}
-        {/* </Stack> */}
       </ElevationScroll>
     </React.Fragment>
   );

@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 
+import { THEME_MODE, BACKGROUD_ALTERNATIVE } from 'style';
+
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -12,25 +14,29 @@ function a11yProps(index) {
   };
 }
 
-export default function AppBarTabs() {
-  const [value, setValue] = useState(0);
-  const [bgc, setBgc] = useState('bg-gray-100');
+export default function AppBarTabs({ tabNumber, selectTab }) {
+  // const [value, setValue] = useState(tabNumber);
+  const [bgc, setBgc] = useState(BACKGROUD_ALTERNATIVE[THEME_MODE.DARK]);
   const theme = useTheme();
 
   useEffect(() => {
-    console.log(theme.palette.mode);
-    setBgc(theme.palette.mode === 'dark' ? 'bg-gray-700' : 'bg-gray-200');
+    setBgc(
+      theme.palette.mode === THEME_MODE.DARK
+        ? BACKGROUD_ALTERNATIVE[THEME_MODE.DARK]
+        : BACKGROUD_ALTERNATIVE[THEME_MODE.LIGHT]
+    );
   }, [theme]);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    // setValue(newValue);
+    selectTab(newValue);
   };
 
   return (
     <Toolbar className={bgc}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%' }}>
         <Tabs
-          value={value}
+          value={tabNumber}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
