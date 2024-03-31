@@ -1,20 +1,11 @@
-import React, { useEffect, Suspense } from 'react';
+import React, { useEffect } from 'react';
 
 import './sass/index.scss';
 import imageGalleryJs from './js/index.js';
 
-// const LazyComponent = React.lazy(() => import('./AfterImageGallery'));
-
 export default function ImageGallery() {
   useEffect(() => {
     imageGalleryJs();
-    //     const script = document.createElement('script');
-    //     script.src = './js/index.js';
-    //     script.async = true;
-    //     document.body.appendChild(script);
-    //     return () => {
-    //       document.body.removeChild(script);
-    //     };
   }, []);
 
   return (
@@ -44,9 +35,6 @@ export default function ImageGallery() {
       <footer className="search__header hidden">
         <p className="footer__title hidden">The End ;)</p>
       </footer>
-      {/* <Suspense fallback={<div>Loading...</div>}>
-        <LazyComponent />
-      </Suspense> */}
     </React.Fragment>
   );
 }

@@ -19,8 +19,6 @@ export default class DataControler {
 
   onLoadLastData = '';
 
-  constructor() {}
-
   setNewSearch(searchLine) {
     this.#pageNumber = 0;
     this.#maxPage = 1;
@@ -88,7 +86,7 @@ export default class DataControler {
       );
     }
 
-    if (this.#pageNumber == this.#maxPage) {
+    if (this.#pageNumber === this.#maxPage) {
       notification.sendNotificationInfo('Oops! Load last data.');
     }
   }
