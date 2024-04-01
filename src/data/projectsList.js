@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { nanoid } from 'nanoid';
+import { Fragment } from 'react';
 import { Route } from 'react-router-dom';
 
 import HomeIcon from '@mui/icons-material/Home';
@@ -48,14 +48,14 @@ const projectsList = [
           {
             id: 1,
             type: CONTENT_TYPE.DETAILS,
-            to: '/igd',
+            to: '/image-gallery-details',
             tagName: 'Description',
             component: <ImageGalleryDetails />,
           },
           {
             id: 2,
             type: CONTENT_TYPE.PROJECT,
-            to: '/igp',
+            to: '/image-gallery-project',
             tagName: 'See the project',
             component: <ImageGalleryProject />,
           },
@@ -66,27 +66,26 @@ const projectsList = [
 ];
 
 const getRoutesFromProjectList = () => {
-  const result = projectsList.map(group =>
-    group.items.map(item =>
-      item.content.map(cont => ({
-        id: cont.id,
-        to: cont.to,
-        component: cont.component,
-        rt:
-          cont.id === 0 ? (
-            <Route index element={item.component} />
-          ) : (
-            <Route to={item.to} element={item.component} />
-          ),
-      }))
+  const result = [];
+  projectsList.map(group =>
+    group.items.forEach(item =>
+      item.content.forEach(cont => {
+        result.push({ id: cont.id, path: cont.to, element: cont.component });
+      })
     )
   );
 
-  console.table(result);
   return (
     <>
       {result.map((item, idx) => {
-        return <React.Fragment key={idx}>{item.rt}</React.Fragment>;
+        return (
+          <Fragment key={idx}>
+            {item.id === 0} &&
+            <Route index element={item.element} />
+            {item.id !== 0} &&
+            <Route path={item.path} element={item.element} />
+          </Fragment>
+        );
       })}
     </>
   );

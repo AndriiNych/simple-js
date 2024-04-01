@@ -3,7 +3,7 @@ import * as React from 'react';
 import './sass/index.scss';
 import imageGalleryJs from './js/index.js';
 
-export default function ImageGallery() {
+export default function ImageGalleryProject() {
   React.useEffect(() => {
     imageGalleryJs();
   }, []);

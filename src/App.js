@@ -5,8 +5,6 @@ import AppMainWindow from 'interface/windows/AppMainWindow';
 import { Page404 } from 'pages';
 import { getRoutesFromProjectList } from 'data';
 
-console.log(getRoutesFromProjectList());
-
 export default function App() {
   return (
     <Routes>
