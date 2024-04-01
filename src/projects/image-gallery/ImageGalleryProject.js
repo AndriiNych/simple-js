@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import * as React from 'react';
 
 import './sass/index.scss';
 import imageGalleryJs from './js/index.js';
 
 export default function ImageGallery() {
-  useEffect(() => {
+  React.useEffect(() => {
     imageGalleryJs();
   }, []);
 

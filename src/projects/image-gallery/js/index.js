@@ -7,7 +7,6 @@ import PaintData from './paint-data';
 import Notification from './notification';
 import MyScroll from './scroll';
 
-console.log('js');
 /** References */
 const refs = {};
 

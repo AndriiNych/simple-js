@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { Outlet } from 'react-router-dom';
 import Toolbar from '@mui/material/Toolbar';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -17,13 +18,15 @@ const currentTheme = mode =>
 const currentMode = isChecked => (isChecked ? 'dark' : 'light');
 
 export default function AppMainWindow(props) {
-  const [tabNumber, setTabNumber] = useState(0);
-  const [isChecked, setIsChecked] = useState(
+  const [tabNumber, setTabNumber] = React.useState(0);
+  const [isChecked, setIsChecked] = React.useState(
     storageTheme.getThemeModeFromLocalStorageAsChecked()
   );
-  const [theme, setTheme] = useState(currentTheme(currentMode(isChecked)));
+  const [theme, setTheme] = React.useState(
+    currentTheme(currentMode(isChecked))
+  );
 
-  useEffect(() => {
+  React.useEffect(() => {
     setTheme(currentTheme(currentMode(isChecked)));
   }, [isChecked]);
 
@@ -46,7 +49,9 @@ export default function AppMainWindow(props) {
         selectTab={handleSelectTab}
       />
       <Toolbar />
-      <AppBody tabNumber={tabNumber} />
+      <AppBody tabNumber={tabNumber}>
+        <Outlet />
+      </AppBody>
     </ThemeProvider>
   );
 }
