@@ -29,8 +29,6 @@ export default function AppMenu() {
                 return (
                   <ListItem key={idx}>
                     <AppMenuItem item={item} />
-                    {/* <ListItemIcon>{item.icon}</ListItemIcon>
-                    <ListItemText primary={item.menuText} /> */}
                   </ListItem>
                 );
               })}
@@ -54,7 +52,6 @@ export default function AppMenu() {
         <MenuIcon />
       </IconButton>
 
-      {/* <Button onClick={toggleDrawer(true)}>Open drawer</Button> */}
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

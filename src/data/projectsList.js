@@ -21,7 +21,7 @@ const projectsList = [
     items: [
       {
         id: 0,
-        title: 'Home',
+        title: 'List of projects written while learning JavaScript',
         icon: <HomeIcon />,
         menuText: 'Home',
         content: [
@@ -41,7 +41,7 @@ const projectsList = [
     items: [
       {
         id: 0,
-        title: 'Image gallery',
+        title: 'Project: Image gallery',
         icon: <Diversity1Icon />,
         menuText: 'Image gallery',
         content: [

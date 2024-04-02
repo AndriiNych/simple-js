@@ -6,7 +6,6 @@ import { Page404 } from 'pages';
 import { getRoutesFromProjectList } from 'data';
 
 export default function App() {
-  console.log(getRoutesFromProjectList());
   return (
     <Routes>
       <Route path="/" element={<AppMainWindow />}>
