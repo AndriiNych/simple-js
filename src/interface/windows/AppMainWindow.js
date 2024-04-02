@@ -49,7 +49,7 @@ export default function AppMainWindow(props) {
         selectTab={handleSelectTab}
       />
       <Toolbar />
-      <AppBody tabNumber={tabNumber}>
+      <AppBody>
         <Outlet />
       </AppBody>
     </ThemeProvider>

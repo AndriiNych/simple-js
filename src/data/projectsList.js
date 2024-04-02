@@ -91,23 +91,18 @@ const getRoutesFromProjectList = () => {
   );
 };
 
-// XXX переробити доступ до елемента через його шлях. Елемент повертати з батьківським
 const getItemFromProjectListByLocation = (path = '') => {
-  console.log(path);
-  if (path === '/') {
-    return projectsList[0].items[0].content[0];
-  }
-
-  for (let groupIdx = 0; groupIdx < projectsList.length; groupIdx++)
-    for (
-      let itemIdx = 0;
-      itemIdx < projectsList[groupIdx].items.length;
-      itemIdx++
-    ) {
-      if (projectsList[groupIdx].items[itemIdx].to === path) {
-        return projectsList[groupIdx].items[itemIdx];
+  for (let groupIdx = 0; groupIdx < projectsList.length; groupIdx++) {
+    const groupItems = projectsList[groupIdx].items;
+    for (let itemIdx = 0; itemIdx < groupItems.length; itemIdx++) {
+      const contentItem = groupItems[itemIdx].content;
+      for (let contentIdx = 0; contentIdx < contentItem.length; contentIdx++) {
+        if (contentItem[contentIdx].to === path) {
+          return groupItems[itemIdx];
+        }
       }
     }
+  }
 
   return {};
 };

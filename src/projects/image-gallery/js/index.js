@@ -51,8 +51,6 @@ export default function importGalleryJs() {
 
   /** сcheck in event start search */
   refs.form.addEventListener('submit', onFirstSearch);
-
-  console.log('importGalleryJs');
 }
 
 function onFirstSearch(event) {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -7,6 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 
 import { THEME_MODE, BACKGROUD_ALTERNATIVE } from 'style';
+import { getItemFromProjectListByLocation } from 'data';
 
 function a11yProps(index) {
   return {
@@ -16,11 +17,15 @@ function a11yProps(index) {
 }
 
 export default function AppBarTabs({ tabNumber, selectTab }) {
-  // const [value, setValue] = useState(tabNumber);
-  const [bgc, setBgc] = useState(BACKGROUD_ALTERNATIVE[THEME_MODE.DARK]);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [item, setItem] = React.useState(
+    getItemFromProjectListByLocation(location.pathname)
+  );
+  const [bgc, setBgc] = React.useState(BACKGROUD_ALTERNATIVE[THEME_MODE.DARK]);
   const theme = useTheme();
 
-  useEffect(() => {
+  React.useEffect(() => {
     setBgc(
       theme.palette.mode === THEME_MODE.DARK
         ? BACKGROUD_ALTERNATIVE[THEME_MODE.DARK]
@@ -28,21 +33,35 @@ export default function AppBarTabs({ tabNumber, selectTab }) {
     );
   }, [theme]);
 
+  React.useEffect(() => {
+    setItem(getItemFromProjectListByLocation(location.pathname));
+  }, [location]);
+
   const handleChange = (event, newValue) => {
-    // setValue(newValue);
-    selectTab(newValue);
+    navigate(item.content[newValue].to);
+  };
+
+  const getTabNumberByLoacation = path => {
+    for (let idx = 0; idx < item.content.length; idx++) {
+      if (item.content[idx].to === path) {
+        return idx;
+      }
+    }
+    return 0;
   };
 
   return (
     <Toolbar className={bgc}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%' }}>
         <Tabs
-          value={tabNumber}
+          value={getTabNumberByLoacation(location.pathname)}
           onChange={handleChange}
-          aria-label="basic tabs example"
         >
-          <Tab label="Details:" {...a11yProps(0)} />
-          <Tab label="Project:" {...a11yProps(1)} />
+          {item.content.map((tab, idx) => {
+            return (
+              <Tab label={tab.tagName} {...a11yProps({ idx })} key={idx} />
+            );
+          })}
         </Tabs>
       </Box>
     </Toolbar>
