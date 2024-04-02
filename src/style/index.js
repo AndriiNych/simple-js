@@ -1,3 +1,3 @@
 import { THEME_MODE, BACKGROUD_ALTERNATIVE } from './constant';
-
-export { THEME_MODE, BACKGROUD_ALTERNATIVE };
+import { menuActiveElement } from './menuActiveElement';
+export { THEME_MODE, BACKGROUD_ALTERNATIVE, menuActiveElement };

@@ -41,9 +41,9 @@ const projectsList = [
     items: [
       {
         id: 0,
-        title: 'Home',
-        icon: <HomeIcon />,
-        menuText: 'Home',
+        title: 'Image gallery',
+        icon: <Diversity1Icon />,
+        menuText: 'Image gallery',
         content: [
           {
             id: 1,
