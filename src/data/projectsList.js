@@ -8,7 +8,12 @@ import Diversity1Icon from '@mui/icons-material/Diversity1';
 // import SevereColdIcon from '@mui/icons-material/SevereCold';
 
 import { HomePageDetails } from 'pages';
-import { ImageGalleryDetails, ImageGalleryProject } from 'projects';
+import {
+  ImageGalleryDetails,
+  ImageGalleryProject,
+  CountdownTimer,
+  CountdownDetails,
+} from 'projects';
 
 const CONTENT_TYPE = {
   DETAILS: 'details',
@@ -58,6 +63,28 @@ const projectsList = [
             to: '/image-gallery-project',
             tagName: 'See the project',
             component: <ImageGalleryProject />,
+          },
+        ],
+      },
+      {
+        id: 1,
+        title: 'Project: Countdown timer',
+        icon: <Diversity1Icon />,
+        menuText: 'Countdown',
+        content: [
+          {
+            id: 1,
+            type: CONTENT_TYPE.DETAILS,
+            to: '/countdown-details',
+            tagName: 'Description',
+            component: <CountdownDetails />,
+          },
+          {
+            id: 2,
+            type: CONTENT_TYPE.PROJECT,
+            to: '/countdown-project',
+            tagName: 'See the project',
+            component: <CountdownTimer />,
           },
         ],
       },
