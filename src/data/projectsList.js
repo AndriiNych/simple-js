@@ -11,8 +11,10 @@ import { HomePageDetails } from 'pages';
 import {
   ImageGalleryDetails,
   ImageGalleryProject,
-  CountdownTimer,
+  CountdownProject,
   CountdownDetails,
+  PromiseProject,
+  PromiseDetails,
 } from 'projects';
 
 const CONTENT_TYPE = {
@@ -66,8 +68,13 @@ const projectsList = [
           },
         ],
       },
+    ],
+  },
+  {
+    groupId: 2,
+    items: [
       {
-        id: 1,
+        id: 0,
         title: 'Project: Countdown timer',
         icon: <Diversity1Icon />,
         menuText: 'Countdown',
@@ -84,7 +91,29 @@ const projectsList = [
             type: CONTENT_TYPE.PROJECT,
             to: '/countdown-project',
             tagName: 'See the project',
-            component: <CountdownTimer />,
+            component: <CountdownProject />,
+          },
+        ],
+      },
+      {
+        id: 1,
+        title: 'Project: Promise generator',
+        icon: <Diversity1Icon />,
+        menuText: 'Promise',
+        content: [
+          {
+            id: 1,
+            type: CONTENT_TYPE.DETAILS,
+            to: '/promise-details',
+            tagName: 'Description',
+            component: <PromiseDetails />,
+          },
+          {
+            id: 2,
+            type: CONTENT_TYPE.PROJECT,
+            to: '/promise-project',
+            tagName: 'See the project',
+            component: <PromiseProject />,
           },
         ],
       },

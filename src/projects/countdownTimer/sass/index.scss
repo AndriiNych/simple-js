@@ -36,6 +36,8 @@ button {
   &:focus:not(:disabled) {
     cursor: pointer;
   }
+
+  padding: 0 8px;
 }
 
 .timer__container {
@@ -45,9 +47,19 @@ button {
 }
 
 #datetime-picker {
+  margin: 0 4px;
+
+  text-align: center;
+}
+
+#datetime-picker,
+button {
   color: inherit;
   background-color: inherit;
-  text-align: center;
+  border-color: inherit;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
 }
 
 .timer {

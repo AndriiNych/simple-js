@@ -1,4 +1,4 @@
-import CountdownTimer from './CountdownTimer';
+import CountdownProject from './CountdownProject';
 import CountdownDetails from './CountdownDetails';
 
-export { CountdownTimer, CountdownDetails };
+export { CountdownProject, CountdownDetails };

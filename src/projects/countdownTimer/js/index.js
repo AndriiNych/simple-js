@@ -1,29 +1,10 @@
 import flatpickr from 'flatpickr';
 import Notiflix from 'notiflix';
 import 'flatpickr/dist/flatpickr.min.css';
-// import Notiflix from 'notiflix';
-// import 'notiflix/dist/notiflix-3.2.5.min.css';
 
-// Notiflix.Notify.init({});
+let options = {};
 
-const options = {
-  enableTime: true,
-  time_24hr: true,
-  defaultDate: new Date(),
-  minuteIncrement: 1,
-  onClose(selectedDates) {
-    checkDate(selectedDates[0].getTime());
-  },
-};
-
-let refs = {
-  //   dateTimePicker: document.querySelector('#datetime-picker'),
-  //   btnStart: document.querySelector('[data-start]'),
-  //   outDays: document.querySelector('[data-days]'),
-  //   outHours: document.querySelector('[data-hours]'),
-  //   outMinutes: document.querySelector('[data-minutes]'),
-  //   outSeconds: document.querySelector('[data-seconds]'),
-};
+let refs = {};
 
 const value = {
   selectedDateTime: 0,
@@ -31,7 +12,7 @@ const value = {
   intervalID: -1,
 };
 
-export default function countdownTimerJs() {
+export default function countdownProjectJs() {
   Notiflix.Notify.init({});
 
   refs = {
@@ -41,6 +22,16 @@ export default function countdownTimerJs() {
     outHours: document.querySelector('[data-hours]'),
     outMinutes: document.querySelector('[data-minutes]'),
     outSeconds: document.querySelector('[data-seconds]'),
+  };
+
+  options = {
+    enableTime: true,
+    time_24hr: true,
+    defaultDate: new Date(),
+    minuteIncrement: 1,
+    onClose(selectedDates) {
+      checkDate(selectedDates[0].getTime());
+    },
   };
 
   flatpickr(refs.dateTimePicker, options);
@@ -67,8 +58,6 @@ function convertMs(ms) {
 
   return { days, hours, minutes, seconds };
 }
-
-// flatpickr(refs.dateTimePicker, options);
 
 // перевірка дати на валідність, вивід повідомлення, активація/деактивація кнопки, відображення нового інтервалу
 function checkDate(selectedDates) {
@@ -99,10 +88,6 @@ function setDisabled(val) {
   }
 }
 
-// setDisabled(true);
-
-// refs.btnStart.addEventListener('click', startTimer);
-
 // запуск таймеру
 function startTimer() {
   if (value.intervalID > 0) {
@@ -127,7 +112,7 @@ function stepInterval() {
 }
 
 // зупинка таймеру
-function stopInterval() {
+export function stopInterval() {
   if (value.intervalID > 0) {
     clearInterval(value.intervalID);
     value.intervalID = 0;

@@ -1,19 +1,21 @@
 import * as React from 'react';
 
 import './sass/index.scss';
-import countdownTimerJs from './js';
+import countdownProjectJs, { stopInterval } from './js';
 
-export default function CountdownTimer() {
+export default function CountdownProject() {
   React.useEffect(() => {
-    countdownTimerJs();
+    countdownProjectJs();
+
+    return stopInterval();
   }, []);
 
   return (
     <section className="main  ">
       <div className="container">
         <div className="timer__container">
-          <input type="text" id="datetime-picker" className="" />
-          <button className="border-black" type="button" data-start>
+          <input type="text" id="datetime-picker" />
+          <button type="button" data-start>
             Start
           </button>
 
@@ -46,32 +48,32 @@ export default function CountdownTimer() {
         </div>
         <div className="notes">
           <p className="notes__all">
-            Перелік реалізованих функцій на сторінці:
+            List of implemented functions on the page:
           </p>
           <ul className="notes__list">
             <li className="notes__item">
-              Якщо таймер уже запущено, то повторне натискання на кнопку Start
-              призведе до повідомлення про помилку.
+              If the timer has already started, pressing the Start button again
+              button again will result in an error message.
             </li>
             <li className="notes__item">
-              Щоб перезапустити таймер його необхідно зупинити.
+              To restart the timer, you need to stop it.
             </li>
             <li className="notes__item">
-              Зупинка таймера передбачена при повторній спробі ввести нову точку
-              відліку.
+              The timer stops when you try to enter a new starting point again.
             </li>
             <li className="notes__item">
-              При виборі валідного значення точки відліку встановлюються
-              показники таймеру.
+              When you select a valid reference point value, the the timer
+              readings.
             </li>
             <li className="notes__item">
-              Пр запуску таймера, таймер спочатку перераховує свої показники на
-              поточні (якщо була затримка між вибором точки відліку і запуском
-              таймера, або таймер зупинявся) і тільки після цього запускається.
+              When you start the timer, the timer first recalculates its
+              readings to current (if there was a delay between selecting the
+              starting point and starting the or the timer was stopped) and only
+              then starts.
             </li>
             <li className="notes__item">
-              Якщо введена помилкова точка відлліку, то показники таймеру
-              обнуляються.
+              If an incorrect reference point is entered, the timer is reset to
+              is reset to zero.
             </li>
           </ul>
         </div>

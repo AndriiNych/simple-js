@@ -1,10 +1,15 @@
-import ImageGalleryDetails from 'projects/image-gallery/ImageGalleryDetails';
-import ImageGalleryProject from 'projects/image-gallery/ImageGalleryProject';
-import { CountdownTimer, CountdownDetails } from 'projects/countdownTimer';
+import {
+  ImageGalleryDetails,
+  ImageGalleryProject,
+} from 'projects/image-gallery';
+import { CountdownProject, CountdownDetails } from 'projects/countdownTimer';
+import { PromiseProject, PromiseDetails } from 'projects/promise';
 
 export {
   ImageGalleryDetails,
   ImageGalleryProject,
-  CountdownTimer,
+  CountdownProject,
   CountdownDetails,
+  PromiseProject,
+  PromiseDetails,
 };
