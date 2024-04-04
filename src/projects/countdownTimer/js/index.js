@@ -59,7 +59,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-// перевірка дати на валідність, вивід повідомлення, активація/деактивація кнопки, відображення нового інтервалу
+// checking the date for validity, displaying a message, activating/deactivating a button, displaying a new interval
 function checkDate(selectedDates) {
   const currentDateTime = new Date().getTime();
   value.selectedDateTime = selectedDates;
@@ -79,7 +79,7 @@ function checkDate(selectedDates) {
   return true;
 }
 
-// вставновлення/зняття доступності кнопки Start
+// setting/unsetting the availability of the Start button
 function setDisabled(val) {
   if (val) {
     refs.btnStart.setAttribute('disabled', 'true');
@@ -88,7 +88,7 @@ function setDisabled(val) {
   }
 }
 
-// запуск таймеру
+// start the timer
 function startTimer() {
   if (value.intervalID > 0) {
     Notiflix.Notify.failure(
@@ -104,14 +104,14 @@ function startTimer() {
   value.intervalID = setInterval(stepInterval, 1000);
 }
 
-// виконання кроку інтервалу
+// performing an interval step
 function stepInterval() {
   value.lastTime -= 1000;
   showDateTime(value.lastTime);
   if (value.lastTime <= 1000) stopInterval();
 }
 
-// зупинка таймеру
+// stop the timer
 export function stopInterval() {
   if (value.intervalID > 0) {
     clearInterval(value.intervalID);
@@ -119,7 +119,7 @@ export function stopInterval() {
   }
 }
 
-// відображення таймеру на сторінку
+// displaying a timer on the page
 function showDateTime(dtm) {
   const { days, hours, minutes, seconds } = convertMs(dtm);
   refs.outDays.textContent = addLeadingZero(days);
@@ -128,7 +128,7 @@ function showDateTime(dtm) {
   refs.outSeconds.textContent = addLeadingZero(seconds);
 }
 
-// доповнення до 2-х символів
+// addition of up to 2 characters
 function addLeadingZero(val) {
   return String(val).padStart(2, 0);
 }

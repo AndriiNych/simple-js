@@ -140,7 +140,7 @@ const projectsList = [
           {
             id: 2,
             type: CONTENT_TYPE.PROJECT,
-            to: '/Country-project',
+            to: '/country-project',
             tagName: 'See the project',
             component: <CountryProject />,
           },

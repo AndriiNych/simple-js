@@ -1,6 +1,4 @@
 export default class PrepareData {
-  // constructor() {}
-
   getHtmlSring(data) {
     return data.map(this.#createDataLine).join('');
   }

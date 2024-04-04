@@ -17,12 +17,12 @@ export default function countryJs() {
 
   dataControler = new DataControler();
 
-  // встанвлюємо слухача подій на поле пошуку
+  // set the event listener to the search field
   new Listener({ selectorSource: '#search-box', callBack: onSearch });
 }
 
 function onSearch(e) {
-  // робимо запит на сервер, якщо прийшли коректні дані - виводимо
+  // make a request to the server, if the data is correct, we display it
   dataControler.loadData(e.target.value).then(data => {
     new DrawCountries(refs).draw(data);
   });
