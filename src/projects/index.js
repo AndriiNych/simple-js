@@ -4,6 +4,7 @@ import {
 } from 'projects/image-gallery';
 import { CountdownProject, CountdownDetails } from 'projects/countdownTimer';
 import { PromiseProject, PromiseDetails } from 'projects/promise';
+import { CountryDetails, CountryProject } from 'projects/country';
 
 export {
   ImageGalleryDetails,
@@ -12,4 +13,6 @@ export {
   CountdownDetails,
   PromiseProject,
   PromiseDetails,
+  CountryDetails,
+  CountryProject,
 };

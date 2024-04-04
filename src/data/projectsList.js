@@ -15,6 +15,8 @@ import {
   CountdownDetails,
   PromiseProject,
   PromiseDetails,
+  CountryDetails,
+  CountryProject,
 } from 'projects';
 
 const CONTENT_TYPE = {
@@ -114,6 +116,33 @@ const projectsList = [
             to: '/promise-project',
             tagName: 'See the project',
             component: <PromiseProject />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    groupId: 3,
+    items: [
+      {
+        id: 0,
+        title: 'Project: View info about country',
+        icon: <Diversity1Icon />,
+        menuText: 'Search country',
+        content: [
+          {
+            id: 1,
+            type: CONTENT_TYPE.DETAILS,
+            to: '/country-details',
+            tagName: 'Description',
+            component: <CountryDetails />,
+          },
+          {
+            id: 2,
+            type: CONTENT_TYPE.PROJECT,
+            to: '/Country-project',
+            tagName: 'See the project',
+            component: <CountryProject />,
           },
         ],
       },

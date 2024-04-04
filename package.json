@@ -20,7 +20,8 @@
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
     "simplelightbox": "^2.11.0",
-    "flatpickr": "^4.6.13"
+    "flatpickr": "^4.6.13",
+    "lodash.debounce": "^4.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
