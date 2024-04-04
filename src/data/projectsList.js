@@ -17,6 +17,8 @@ import {
   PromiseDetails,
   CountryDetails,
   CountryProject,
+  WeatherProject,
+  WeatherDetails,
 } from 'projects';
 
 const CONTENT_TYPE = {
@@ -143,6 +145,28 @@ const projectsList = [
             to: '/country-project',
             tagName: 'See the project',
             component: <CountryProject />,
+          },
+        ],
+      },
+      {
+        id: 1,
+        title: 'Project: Weather forecast',
+        icon: <Diversity1Icon />,
+        menuText: 'Weather forecast',
+        content: [
+          {
+            id: 1,
+            type: CONTENT_TYPE.DETAILS,
+            to: '/weather-details',
+            tagName: 'Description',
+            component: <WeatherDetails />,
+          },
+          {
+            id: 2,
+            type: CONTENT_TYPE.PROJECT,
+            to: '/weather-project',
+            tagName: 'See the project',
+            component: <WeatherProject />,
           },
         ],
       },

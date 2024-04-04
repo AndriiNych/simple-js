@@ -12,14 +12,15 @@ export default function CountdownProject() {
 
   return (
     <section className="main  ">
-      <div className="container">
-        <div className="timer__container">
-          <input type="text" id="datetime-picker" />
-          <button type="button" data-start>
-            Start
-          </button>
-
-          <div className="timer">
+      <div className="container margin__auto">
+        <div className="timer__container margin__auto">
+          <div className="margin__auto">
+            <input type="text" id="datetime-picker" />
+            <button type="button" data-start>
+              Start
+            </button>
+          </div>
+          <div className="timer margin__auto">
             <div className="field">
               <span className="value" data-days>
                 00
@@ -46,7 +47,7 @@ export default function CountdownProject() {
             </div>
           </div>
         </div>
-        <div className="notes">
+        <div className="notes margin__auto">
           <p className="notes__all">
             List of implemented functions on the page:
           </p>
