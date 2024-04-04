@@ -9,9 +9,9 @@ export class DrawCountries {
     this.#refs.list.innerHTML = '';
     this.#refs.info.innerHTML = '';
 
-    if (data.length == 0) return;
+    if (data.length === 0) return;
 
-    if (data.length == 1) {
+    if (data.length === 1) {
       return this.#drawCountry(data);
     }
 
