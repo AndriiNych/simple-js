@@ -7,7 +7,7 @@ export class SearchCountries {
   }
 
   #fieldsListToSearchString() {
-    if (this.#fldList.length == 0) return '';
+    if (this.#fldList.length === 0) return '';
 
     return `?fields=${this.#fldList.join(',')}`;
   }
