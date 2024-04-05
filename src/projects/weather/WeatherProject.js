@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './scss/index.scss';
+import './sass/index.scss';
 import weatherJs from './js';
 
 export default function WeatherProject() {

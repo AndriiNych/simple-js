@@ -3,22 +3,30 @@ import { Fragment } from 'react';
 import { Route } from 'react-router-dom';
 
 import HomeIcon from '@mui/icons-material/Home';
-import Diversity1Icon from '@mui/icons-material/Diversity1';
-//import BedroomBabyIcon from '@mui/icons-material/BedroomBaby';
-// import SevereColdIcon from '@mui/icons-material/SevereCold';
+import CollectionsIcon from '@mui/icons-material/Collections';
+import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
+import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
+import AvTimerIcon from '@mui/icons-material/AvTimer';
+import PublishedWithChangesIcon from '@mui/icons-material/PublishedWithChanges';
+import LanguageIcon from '@mui/icons-material/Language';
+import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
 import { HomePageDetails } from 'pages';
 import {
   ImageGalleryDetails,
   ImageGalleryProject,
-  CountdownProject,
   CountdownDetails,
-  PromiseProject,
+  CountdownProject,
   PromiseDetails,
+  PromiseProject,
   CountryDetails,
   CountryProject,
-  WeatherProject,
   WeatherDetails,
+  WeatherProject,
+  VideoPlayerDetails,
+  VideoPlayerProject,
+  SimpleGalleryDetails,
+  SimpleGalleryProject,
 } from 'projects';
 
 const CONTENT_TYPE = {
@@ -53,7 +61,7 @@ const projectsList = [
       {
         id: 0,
         title: 'Project: Image gallery',
-        icon: <Diversity1Icon />,
+        icon: <CollectionsIcon />,
         menuText: 'Image gallery',
         content: [
           {
@@ -72,6 +80,50 @@ const projectsList = [
           },
         ],
       },
+      {
+        id: 1,
+        title: 'Project: Simple image gallery',
+        icon: <AutoAwesomeMotionIcon />,
+        menuText: 'Simple gallery',
+        content: [
+          {
+            id: 1,
+            type: CONTENT_TYPE.DETAILS,
+            to: '/simple-gallery-details',
+            tagName: 'Description',
+            component: <SimpleGalleryDetails />,
+          },
+          {
+            id: 2,
+            type: CONTENT_TYPE.PROJECT,
+            to: '/simple-gallery-project',
+            tagName: 'See the project',
+            component: <SimpleGalleryProject />,
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: 'Project: Video player',
+        icon: <VideoCameraBackIcon />,
+        menuText: 'Video player',
+        content: [
+          {
+            id: 1,
+            type: CONTENT_TYPE.DETAILS,
+            to: '/video-player-details',
+            tagName: 'Description',
+            component: <VideoPlayerDetails />,
+          },
+          {
+            id: 2,
+            type: CONTENT_TYPE.PROJECT,
+            to: '/video-player-project',
+            tagName: 'See the project',
+            component: <VideoPlayerProject />,
+          },
+        ],
+      },
     ],
   },
   {
@@ -80,7 +132,7 @@ const projectsList = [
       {
         id: 0,
         title: 'Project: Countdown timer',
-        icon: <Diversity1Icon />,
+        icon: <AvTimerIcon />,
         menuText: 'Countdown',
         content: [
           {
@@ -102,7 +154,7 @@ const projectsList = [
       {
         id: 1,
         title: 'Project: Promise generator',
-        icon: <Diversity1Icon />,
+        icon: <PublishedWithChangesIcon />,
         menuText: 'Promise',
         content: [
           {
@@ -129,7 +181,7 @@ const projectsList = [
       {
         id: 0,
         title: 'Project: View info about country',
-        icon: <Diversity1Icon />,
+        icon: <LanguageIcon />,
         menuText: 'Search country',
         content: [
           {
@@ -151,7 +203,7 @@ const projectsList = [
       {
         id: 1,
         title: 'Project: Weather forecast',
-        icon: <Diversity1Icon />,
+        icon: <CloudQueueIcon />,
         menuText: 'Weather forecast',
         content: [
           {

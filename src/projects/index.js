@@ -2,20 +2,29 @@ import {
   ImageGalleryDetails,
   ImageGalleryProject,
 } from 'projects/image-gallery';
-import { CountdownProject, CountdownDetails } from 'projects/countdownTimer';
-import { PromiseProject, PromiseDetails } from 'projects/promise';
+import { CountdownDetails, CountdownProject } from 'projects/countdownTimer';
+import { PromiseDetails, PromiseProject } from 'projects/promise';
 import { CountryDetails, CountryProject } from 'projects/country';
-import { WeatherProject, WeatherDetails } from 'projects/weather';
+import { WeatherDetails, WeatherProject } from 'projects/weather';
+import { VideoPlayerDetails, VideoPlayerProject } from 'projects/videoPlayer';
+import {
+  SimpleGalleryDetails,
+  SimpleGalleryProject,
+} from 'projects/simple-gallery';
 
 export {
   ImageGalleryDetails,
   ImageGalleryProject,
-  CountdownProject,
   CountdownDetails,
-  PromiseProject,
+  CountdownProject,
   PromiseDetails,
+  PromiseProject,
   CountryDetails,
   CountryProject,
-  WeatherProject,
   WeatherDetails,
+  WeatherProject,
+  VideoPlayerDetails,
+  VideoPlayerProject,
+  SimpleGalleryDetails,
+  SimpleGalleryProject,
 };

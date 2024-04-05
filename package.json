@@ -10,7 +10,11 @@
     "@hookform/resolvers": "^3.3.2",
     "@mui/icons-material": "^5.14.19",
     "@mui/material": "^5.14.20",
+    "@vimeo/player": "^2.18.0",
     "axios": "^1.2.2",
+    "basiclightbox": "^5.0.4",
+    "flatpickr": "^4.6.13",
+    "lodash.debounce": "^4.0.8",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.5",
     "react": "^18.2.0",
@@ -19,9 +23,7 @@
     "react-scripts": "5.0.1",
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
-    "simplelightbox": "^2.11.0",
-    "flatpickr": "^4.6.13",
-    "lodash.debounce": "^4.0.8"
+    "simplelightbox": "^2.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
