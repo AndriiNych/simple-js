@@ -18,10 +18,10 @@ export default function countdownProjectJs() {
   refs = {
     dateTimePicker: document.querySelector('#datetime-picker'),
     btnStart: document.querySelector('[data-start]'),
-    outDays: document.querySelector('[data-days]'),
-    outHours: document.querySelector('[data-hours]'),
-    outMinutes: document.querySelector('[data-minutes]'),
-    outSeconds: document.querySelector('[data-seconds]'),
+    outDays: document.querySelector('[data-value="days"]'),
+    outHours: document.querySelector('[data-value="hours"]'),
+    outMinutes: document.querySelector('[data-value="minutes"]'),
+    outSeconds: document.querySelector('[data-value="seconds"]'),
   };
 
   options = {
