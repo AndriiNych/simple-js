@@ -27,8 +27,8 @@ export default function CountdownProject() {
           <p className="notes__all">
             List of implemented functions on the page:
           </p>
+          <Notes />
         </div>
-        <Notes />
       </div>
     </section>
   );
