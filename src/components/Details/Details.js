@@ -47,7 +47,7 @@ function Li({ text }) {
   );
 }
 
-function getComponentByType(props) {}
+// function getComponentByType(props) {}
 
 export default function Details({ details }) {
   return (
