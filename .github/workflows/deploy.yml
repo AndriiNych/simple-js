@@ -18,7 +18,7 @@ jobs:
 
       - name: Deploy 🚀
         env:
-          REACT_APP_WEATHER: ${{ secrets.API_KEY }}
+          REACT_APP_WEATHER: ${{ secrets.REACT_APP_WEATHER }}
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
