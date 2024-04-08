@@ -3,6 +3,9 @@ import * as React from 'react';
 import './sass/index.scss';
 import weatherJs from './js';
 
+console.log('process');
+console.log(process.env);
+
 export default function WeatherProject() {
   React.useEffect(() => {
     weatherJs();

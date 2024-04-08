@@ -2,7 +2,7 @@ import windDirectionIndicator from '../images/cmp.svg';
 
 const paramFetch = {
   url: 'https://api.openweathermap.org/data/2.5/',
-  appid: 'a9fe45a0e7ef008c3d2dc26522b1934c',
+  appid: process.env.REACT_APP_WEATHER,
   urlImg: 'https://openweathermap.org/img/wn/',
 };
 
@@ -49,6 +49,10 @@ function createSelect(clsPrev, cls, arr) {
   if (document.querySelector(`#${nameSelector}`) !== null) {
     return;
   }
+
+  // const appid = process.env.API_KEY_WEATHER;
+  // console.log(appid);
+  // paramFetch.appid = appid;
 
   const el = document.createElement('select');
   el.onchange = onChangeSelect;
