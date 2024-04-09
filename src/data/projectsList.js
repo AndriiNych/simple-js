@@ -10,6 +10,7 @@ import AvTimerIcon from '@mui/icons-material/AvTimer';
 import PublishedWithChangesIcon from '@mui/icons-material/PublishedWithChanges';
 import LanguageIcon from '@mui/icons-material/Language';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+import BuildCircleIcon from '@mui/icons-material/BuildCircle';
 
 import { HomePageDetails, Page404 } from 'pages';
 import {
@@ -228,9 +229,9 @@ const projectsList = [
 
 const itemError = {
   id: 0,
-  title: 'Project: Weather forecast',
-  icon: <CloudQueueIcon />,
-  menuText: 'Weather forecast',
+  title: 'Page not found',
+  icon: <BuildCircleIcon />,
+  menuText: 'Error',
   content: [
     {
       id: 1,
