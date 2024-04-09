@@ -13,8 +13,8 @@ export default function App() {
     <Routes>
       <Route path="/" element={<AppMainWindow />}>
         <Route index element={<HomePageDetails />} />
-        <Route path="image-gallery-details" element={<ImageGalleryDetails />} />
-        <Route path="image-gallery-project" element={<ImageGalleryProject />} />
+        <Route path="ImageGalleryDetails" element={<ImageGalleryDetails />} />
+        <Route path="ImageGalleryProject" element={<ImageGalleryProject />} />
         {/* {getRoutesFromProjectList()} */}
         <Route path="*" element={<Page404 />} />
       </Route>
