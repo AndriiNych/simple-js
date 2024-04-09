@@ -68,14 +68,14 @@ const projectsList = [
           {
             id: 1,
             type: CONTENT_TYPE.DETAILS,
-            to: '/ImageGalleryDetails',
+            to: '/image-gallery-details',
             tagName: 'Description',
             component: <ImageGalleryDetails />,
           },
           {
             id: 2,
             type: CONTENT_TYPE.PROJECT,
-            to: '/ImageGalleryProject',
+            to: '/image-gallery-project',
             tagName: 'See the project',
             component: <ImageGalleryProject />,
           },
