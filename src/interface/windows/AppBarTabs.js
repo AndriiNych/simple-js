@@ -42,6 +42,9 @@ export default function AppBarTabs({ tabNumber, selectTab }) {
   };
 
   const getTabNumberByLoacation = path => {
+    if (!item?.content) {
+      return 0;
+    }
     for (let idx = 0; idx < item.content.length; idx++) {
       if (item.content[idx].to === path) {
         return idx;

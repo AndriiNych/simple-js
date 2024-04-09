@@ -11,7 +11,7 @@ import PublishedWithChangesIcon from '@mui/icons-material/PublishedWithChanges';
 import LanguageIcon from '@mui/icons-material/Language';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
-import { HomePageDetails } from 'pages';
+import { HomePageDetails, Page404 } from 'pages';
 import {
   ImageGalleryDetails,
   ImageGalleryProject,
@@ -226,6 +226,22 @@ const projectsList = [
   },
 ];
 
+const itemError = {
+  id: 0,
+  title: 'Project: Weather forecast',
+  icon: <CloudQueueIcon />,
+  menuText: 'Weather forecast',
+  content: [
+    {
+      id: 1,
+      type: CONTENT_TYPE.DETAILS,
+      to: '/error',
+      tagName: 'ERROR',
+      component: <Page404 />,
+    },
+  ],
+};
+
 const getRoutesFromProjectList = () => {
   const result = [];
   projectsList.map(group =>
@@ -265,7 +281,7 @@ const getItemFromProjectListByLocation = (path = '') => {
     }
   }
 
-  return {};
+  return itemError;
 };
 
 export {
