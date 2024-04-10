@@ -7,7 +7,7 @@ const ERR_404 =
 
 export default class DataControler {
   #URL = 'https://pixabay.com/api/';
-  #KEY = 'key=32660703-81d5f2d1cd5893d94cddf879d';
+  #KEY = process.env.REACT_APP_GALLERY;
   #TYPE = 'image_type=photo';
   #PER_PAGE = 40;
   #totalHits = 0;
@@ -93,7 +93,8 @@ export default class DataControler {
 
   #createSearchLine() {
     this.#pageNumber++;
-
+    console.log(this.#KEY);
+    console.log(process.env.REACT_APP_GALLERY);
     this.#search = `${this.#URL}?${this.#KEY}&${this.#TYPE}
       &page=${this.#pageNumber}&per_page=${this.#PER_PAGE}&q=${
       this.#searchLine

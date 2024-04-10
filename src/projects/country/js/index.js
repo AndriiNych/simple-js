@@ -1,8 +1,8 @@
-// клас слухача подій
+// event listener class
 import { Listener } from './listener';
-// клас отримання даних
+// data receiving class
 import { DataControler } from './data-controler';
-// клас малювання результату
+// result drawing class
 import { DrawCountries } from './draw-data';
 
 let refs = {};

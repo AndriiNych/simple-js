@@ -8,13 +8,42 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import CircleIcon from '@mui/icons-material/Circle';
 
-export const typeText = {
-  h5: H5,
-  ul: Ul,
-  li: Li,
-  prim: '',
-  p: '',
+export const TYPE_TEXT = {
+  H5: 'h5',
+  UL: 'ul',
+  LI: 'li',
+  PRIM: 'prim',
+  P: 'p',
 };
+
+const typeText = {
+  [TYPE_TEXT.H5]: H5,
+  [TYPE_TEXT.UL]: Ul,
+  [TYPE_TEXT.LI]: Li,
+  [TYPE_TEXT.PRIM]: Prim,
+  [TYPE_TEXT.P]: P,
+};
+
+function P({ text }) {
+  return (
+    <Typography variant="body1" className="py-3">
+      {text}
+    </Typography>
+  );
+}
+
+function Prim({ text, note }) {
+  return (
+    <div className="flex flex-row gap-2 items-center italic ">
+      <Typography variant="button" fontWeight="bold">
+        {note}
+      </Typography>
+      <Typography variant="body2" fontWeight="bold">
+        {text}
+      </Typography>
+    </div>
+  );
+}
 
 function H5({ text }) {
   return <Typography variant="h5">{text}</Typography>;
@@ -47,8 +76,6 @@ function Li({ text }) {
   );
 }
 
-// function getComponentByType(props) {}
-
 export default function Details({ details }) {
   return (
     <Box sx={{ maxWidth: 700, paddingX: '15px', marginX: 'auto' }}>
@@ -58,5 +85,3 @@ export default function Details({ details }) {
     </Box>
   );
 }
-
-// XXX при запуске поставить проверку, что б несколько раз не інітілся календарь
