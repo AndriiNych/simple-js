@@ -70,10 +70,15 @@ const details = [
       {
         id: 4,
         type: TYPE_TEXT.LI,
-        text: 'The delay in launching an appeal to the country service is implemented using "lodash.debounce".',
+        text: 'The data request is built using "fetch". ',
       },
       {
         id: 5,
+        type: TYPE_TEXT.LI,
+        text: 'The delay in launching an appeal to the country service is implemented using "lodash.debounce".',
+      },
+      {
+        id: 6,
         type: TYPE_TEXT.LI,
         text: 'Notifications are implemented using "notiflix".',
       },

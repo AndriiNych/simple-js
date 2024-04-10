@@ -28,7 +28,7 @@ export default function ImageGalleryProject() {
       </header>
       <section>
         <div className="container">
-          <div className="gallery"></div>
+          <div className="gallery__immage"></div>
           <div title="Back to search" className="back-search hidden"></div>
         </div>
       </section>

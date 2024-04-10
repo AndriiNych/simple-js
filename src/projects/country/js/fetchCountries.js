@@ -15,7 +15,6 @@ export class SearchCountries {
   async fetchCountries(name) {
     const search = name.trim();
     if (search === '') {
-      console.log('promise');
       return await Promise.resolve([]);
     }
 
@@ -23,10 +22,8 @@ export class SearchCountries {
       `${this.#API_URL}${search}${this.#fieldsListToSearchString()}`
     ).then(response => {
       if (!response.ok) {
-        console.log('promise Err');
         return Promise.reject(response);
       }
-      console.log('promise OR');
       return response.json();
     });
   }

@@ -6,7 +6,7 @@ const ERR_404 =
   'Sorry, there are no images matching your search query. Please try again.';
 
 export default class DataControler {
-  #URL = 'https://pixabay.com/api/';
+  #URL = '  https://pixabay.com/api/';
   #KEY = process.env.REACT_APP_GALLERY;
   #TYPE = 'image_type=photo';
   #PER_PAGE = 40;
@@ -93,8 +93,6 @@ export default class DataControler {
 
   #createSearchLine() {
     this.#pageNumber++;
-    console.log(this.#KEY);
-    console.log(process.env.REACT_APP_GALLERY);
     this.#search = `${this.#URL}?${this.#KEY}&${this.#TYPE}
       &page=${this.#pageNumber}&per_page=${this.#PER_PAGE}&q=${
       this.#searchLine

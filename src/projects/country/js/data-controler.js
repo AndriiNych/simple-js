@@ -20,7 +20,6 @@ export class DataControler {
 
   #onResponse(data) {
     if (data.length > 10) {
-      console.log('1');
       notification.sendNotificationInfo(
         'Too many matches found. Please enter a more specific name.'
       );
@@ -37,8 +36,6 @@ export class DataControler {
       );
       return Promise.resolve([]);
     } else {
-      console.log('error - else => ', error);
-
       return Promise.reject(error);
     }
   }

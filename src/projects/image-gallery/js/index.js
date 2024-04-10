@@ -31,9 +31,9 @@ export default function importGalleryJs() {
   prepareData = new PrepareData();
   notification = new Notification();
 
-  gallery = new SimpleLightbox('.gallery a', { scrollZoom: false });
+  gallery = new SimpleLightbox('.gallery__immage a', { scrollZoom: false });
 
-  paintData = new PaintData('.gallery', 'footer', '.footer__title');
+  paintData = new PaintData('.gallery__immage', 'footer', '.footer__title');
   dataControler = new DataControler();
   /** when load last data -> show caption "The end" */
   dataControler.onLoadLastData = paintData.showInfoLoadEndData.bind(paintData);
