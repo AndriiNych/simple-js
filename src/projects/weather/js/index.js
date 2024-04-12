@@ -50,10 +50,6 @@ function createSelect(clsPrev, cls, arr) {
     return;
   }
 
-  // const appid = process.env.API_KEY_WEATHER;
-  // console.log(appid);
-  // paramFetch.appid = appid;
-
   const el = document.createElement('select');
   el.onchange = onChangeSelect;
   el.classList.add(cls);
