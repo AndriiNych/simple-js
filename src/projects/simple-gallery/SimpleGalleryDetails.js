@@ -6,7 +6,7 @@ const details = [
   {
     id: 0,
     type: TYPE_TEXT.P,
-    text: 'The project demonstrates how promise works in conjunction with setTimeout. The user can set the start delay, the delay between launches, and the number of generated promises. Using a random number generator, the promise is rejected in 30% of cases. Depending on the result, the user receives appropriate notifications.',
+    text: 'A simple image gallery.',
   },
   {
     id: 1,
@@ -16,7 +16,7 @@ const details = [
       {
         id: 0,
         type: TYPE_TEXT.LI,
-        text: 'The project is implemented in JavaScript using the classes.',
+        text: 'The gallery is built on the basicLightbox library.',
       },
       {
         id: 1,
@@ -31,12 +31,12 @@ const details = [
       {
         id: 4,
         type: TYPE_TEXT.LI,
-        text: 'Notifications are implemented using "notiflix".',
+        text: 'The list of images is taken from the prepared json file.',
       },
       {
         id: 5,
         type: TYPE_TEXT.LI,
-        text: 'Promise and setTimeout is used.',
+        text: 'Images are taken from pixabay.com as ready-made links to images.',
       },
     ],
   },
