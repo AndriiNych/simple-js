@@ -1,14 +1,19 @@
 import * as React from 'react';
 
 import './sass/index.scss';
-import countdownProjectJs, { stopInterval } from './js';
+import countdownProjectJs, { stopInterval, removeFlatpickr } from './js';
 import { Notes, Datas } from './components';
+
+function clear() {
+  stopInterval();
+  removeFlatpickr();
+}
 
 export default function CountdownProject() {
   React.useEffect(() => {
     countdownProjectJs();
 
-    return stopInterval();
+    return () => clear();
   }, []);
 
   return (

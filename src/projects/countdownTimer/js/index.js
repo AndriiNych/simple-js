@@ -119,6 +119,11 @@ export function stopInterval() {
   }
 }
 
+export function removeFlatpickr() {
+  const elements = document.querySelectorAll('.flatpickr-calendar');
+  elements.forEach(item => item.remove());
+}
+
 // displaying a timer on the page
 function showDateTime(dtm) {
   const { days, hours, minutes, seconds } = convertMs(dtm);

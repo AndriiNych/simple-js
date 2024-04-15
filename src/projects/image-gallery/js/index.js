@@ -106,3 +106,13 @@ function setFocusToSearchField() {
   refs.search.focus();
   refs.search.select();
 }
+
+export function clearLibrary() {
+  // if (gallery) {
+  //   gallery.destroy();
+  // }
+  // let elem = document.querySelector('.sl-overlay');
+  // elem?.remove();
+  // elem = document.querySelector('.sl-wrapper');
+  // elem?.remove();
+}
