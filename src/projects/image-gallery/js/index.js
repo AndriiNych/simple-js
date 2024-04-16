@@ -31,7 +31,11 @@ export default function importGalleryJs() {
   prepareData = new PrepareData();
   notification = new Notification();
 
-  gallery = new SimpleLightbox('.gallery__immage a', { scrollZoom: false });
+  gallery = new SimpleLightbox('.gallery__immage a', {
+    scrollZoom: false,
+    close: false,
+    showCounter: false,
+  });
 
   paintData = new PaintData('.gallery__immage', 'footer', '.footer__title');
   dataControler = new DataControler();
@@ -105,14 +109,4 @@ function makeBtnBackToSearchAsVisible() {
 function setFocusToSearchField() {
   refs.search.focus();
   refs.search.select();
-}
-
-export function clearLibrary() {
-  // if (gallery) {
-  //   gallery.destroy();
-  // }
-  // let elem = document.querySelector('.sl-overlay');
-  // elem?.remove();
-  // elem = document.querySelector('.sl-wrapper');
-  // elem?.remove();
 }

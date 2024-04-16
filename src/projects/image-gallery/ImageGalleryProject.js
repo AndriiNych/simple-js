@@ -1,12 +1,11 @@
 import * as React from 'react';
 
 import './sass/index.scss';
-import imageGalleryJs, { clearLibrary } from './js/index.js';
+import imageGalleryJs from './js/index.js';
 
 export default function ImageGalleryProject() {
   React.useEffect(() => {
     imageGalleryJs();
-    return () => clearLibrary();
   }, []);
 
   return (
