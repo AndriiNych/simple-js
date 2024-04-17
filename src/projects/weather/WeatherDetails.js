@@ -6,7 +6,7 @@ const details = [
   {
     id: 0,
     type: TYPE_TEXT.P,
-    text: 'Work with a video player. The project is aimed at working with local storage. When viewing an image, the current viewing time is recorded in local storage; when refreshing the page, the time is taken from the storage and viewing starts from the saved point.',
+    text: 'Weather forecast display component.',
   },
   {
     id: 1,
@@ -16,27 +16,38 @@ const details = [
       {
         id: 0,
         type: TYPE_TEXT.LI,
-        text: 'The project is implemented in JavaScript.',
+        text: 'API: https://api.openweathermap.org/data/2.5/.',
       },
       {
         id: 1,
         type: TYPE_TEXT.LI,
-        text: 'CSS using the SASS preprocessor.',
+        text: 'The key for the API is stored in ".env" and for gh-pages in the Repository secrets.',
       },
       {
         id: 2,
         type: TYPE_TEXT.LI,
-        text: 'Video is taken from player.vimeo.com',
+        text: 'The weather picture is loaded from the site.',
+      },
+      {
+        id: 3,
+        type: TYPE_TEXT.LI,
+        text: 'The service shows the wind direction in degrees, so the function of determining the direction is implemented.',
       },
       {
         id: 4,
         type: TYPE_TEXT.LI,
-        text: 'The @vimeo/player service is used.',
+        text: 'The list of cities is fixed and is contained in an object that indicates the name of the city, its ID on the service, and which city is used by default.',
       },
+
       {
         id: 5,
         type: TYPE_TEXT.LI,
-        text: 'When recording the current viewing time, lodash.throttle is used.',
+        text: 'CSS using the SASS preprocessor.',
+      },
+      {
+        id: 6,
+        type: TYPE_TEXT.LI,
+        text: 'When naming CSS classes, BEM technology was used.',
       },
     ],
   },

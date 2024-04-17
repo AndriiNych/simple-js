@@ -26,7 +26,7 @@ const details = [
       {
         id: 2,
         type: TYPE_TEXT.LI,
-        text: 'Video is taken from player.vimeo.com',
+        text: 'Video is taken from player.vimeo.com.',
       },
       {
         id: 4,
